@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First App - {% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="SERIALKEN" />
+    {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
+    {% block stylesheets %}
+    {% endblock stylesheets%}
+</head>
+<body>
+<div class="main">
+    {% block warning %}
+    {% endblock warning %}
+
+    {% block menu %}
+    {% endblock menu %}
+        <div id="body" class="col-xxs-12 col-xs-12 col-md-12">
+        {#<div id="body" class="col-xxs-12 col-xs-12 col-md-12">#}
+            {% block body %}
+            {% endblock body %}
+        </div>
+        <div id="footer" class="col-xxs-12 col-xs-12 col-md-12">
+        {#<div id="footer" class="col-xxs-12 col-xs-12 col-md-12">#}
+        </div>
+    </div>
+</div>
+
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>
